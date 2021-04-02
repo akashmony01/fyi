@@ -1,0 +1,263 @@
+.header
+    z-index: 999
+    padding: 10px 35px
+    background-color: #fff
+
+    .headerContainer
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        .logo
+            display: block
+
+            img
+                width: 100px
+                height: auto
+
+        .menu
+            display: flex
+            align-items: center
+
+            .menuList
+                list-style-type: none
+                margin: 0
+
+                li
+                    display: inline-block
+
+                    a
+                        font-size: 16px
+                        line-height: 18.96px
+                        font-family: Rubik-Regular
+                        font-weight: 500
+                        color: #313131
+                        padding: 10px 15px
+
+                    form
+                        input
+                            border-bottom: 2px solid rgba(0, 0, 0, .5)
+                            padding: 7px 0
+
+                        button
+                            padding: 10px
+
+            .menuBtn
+                background-color: $primary
+                border-radius: 10px
+                padding: 15px 20px
+                color: #000
+                font-family: Rubik-Regular
+                font-weight: 500
+                font-size: 16px
+                line-height: 15.41px
+                margin-left: 15px
+                text-transform: capitalize
+
+            .mobileBtn
+                height: 30px
+                width: 30px
+                font-size: 25px
+                margin-left: 10px
+                display: block
+                position: relative
+
+                i
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    color: #333
+                    transition: .3s
+
+                    &.fa-times
+                        opacity: 0
+
+            .mobileBtn
+                display: none
+
+            &.supportMenu
+                flex-direction: column
+                align-items: flex-end
+                
+                #supportSearch
+                    display: flex
+                    align-items: center
+                    margin-bottom: 15px
+
+                    input
+                        border: 1px solid rgba(0, 0, 0, .25)
+                        height: 30px
+                        border-radius: 2px
+                        width: 120px
+                        padding: 0 10px
+
+                    button
+                        background-color: #237725
+                        width: 30px
+                        height: 30px
+                        color: #fff
+                        padding: 0
+                        font-size: 14px
+
+                .menuList
+                    li
+                        a
+                            &:last-child
+                                padding-right: 0
+
+    &.scrolled
+        background-color: rgba(0, 0, 0, .35)
+        min-height: 130px
+        border-bottom: 1px solid rgba(255, 255, 255, .25)
+
+        .headerContainer
+            .logo
+                img
+                    width: 130px
+
+
+@media only screen and (max-width: 1024px)
+    .header
+        .headerContainer
+            position: relative
+            
+            .menu
+                &.supportMenu
+                    flex-direction: row
+                    align-items: center
+
+                    #supportSearch
+                        margin-bottom: 0
+
+                .menuList
+                    position: absolute
+                    top: 100%
+                    left: 0
+                    right: 0
+                    background-color: #fff
+                    z-index: 998
+                    margin-top: 9px
+                    border: 1px solid rgba(0, 0, 0, .05)
+                    max-height: 0px
+                    overflow: hidden
+                    transition: .3s
+                    opacity: 0
+
+                    li
+                        display: block
+                        padding: 0 20px
+
+                        a
+                            font-size: 20px
+                            padding: 10px 0
+                            display: block
+
+                        form
+                            padding-top: 5px
+                            display: flex
+                            align-items: center
+                            
+                            input
+                                border: 1px solid rgba(0, 0, 0, .5)
+                                padding: 10px 15px
+                                height: 40px
+                                max-width: calc( 100% - 40px )
+                                border-radius: 0
+                                max-width: 
+
+                            button
+                                background-color: FCE912
+                                height: 40px
+                                width: 40px
+                                color: #333
+                                border: 1px solid rgba(0, 0, 0, .5)
+
+                .mobileBtn
+                    display: block
+
+
+        &.mobileActive
+            .headerContainer
+                .menu
+                    .menuList
+                        padding: 20px 0
+                        max-height: 100vh
+                        overflow-y: auto
+                        margin-top: 10px
+                        border: 1px solid rgba(0, 0, 0, .05)
+                        opacity: 1
+
+                    .mobileBtn
+                        i
+                            &.fa-bars
+                                opacity: 0
+                                transform: translate(-50%, -50%) rotate(180deg)
+
+                            &.fa-times
+                                opacity: 1
+                                transform: translate(-50%, -50%) rotate(180deg)
+
+
+
+// responsive
+@media only screen and (max-width: 767px)
+    .header
+        padding: 10px 25px
+        min-height: 120px
+
+        .headerContainer
+            .logo
+                img
+                    width: 120px
+
+            .menu
+                .menuBtn
+                    padding: 15px
+
+        &.scrolled
+            min-height: 120px
+
+            .headerContainer
+                .logo
+                    img
+                        width: 120px
+
+
+@media only screen and (max-width: 480px)
+    .header
+        min-height: 70px
+        padding: 5px        
+        .headerContainer
+            .logo
+                img
+                    width: 70px
+
+            .menu
+                .menuList
+                    margin-top: 4px
+
+                    li
+                        a
+                            padding: 5px
+                            font-size: 13px
+                .menuBtn
+                    padding: 10px
+                    border: 1 px solid $white
+                    border-radius: 5px 
+                    font-size: 13px
+
+        &.scrolled
+            min-height: 70px
+
+            .headerContainer
+                .logo
+                    img
+                        width: 70px
+
+        &.mobileActive
+            .headerContainer
+                .menu
+                    .menuList
+                        margin-top: 5px
+

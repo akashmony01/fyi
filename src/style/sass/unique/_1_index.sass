@@ -1,0 +1,427 @@
+.heroBanner
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    position: relative
+
+    &::after
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        content: ''
+        background-color: rgba(0, 0, 0, .05)
+        z-index: 0
+        border-radius: 0px 0px 50px 50px
+    
+    .heroContainer
+        z-index: 1
+        position: sticky
+        padding-top: 100px
+        padding-bottom: 200px
+
+        .heroInner
+            h1
+                max-width: 450px
+                font-family: Rubik-regular
+                font-size: 54px
+                font-style: normal
+                font-weight: 500
+                line-height: 76px
+                letter-spacing: 0em
+                text-align: left
+                color: $white
+
+            p
+                font-size: 20px
+                line-height: 30px
+                color: #E5EEFF
+                font-family: Rubik-Light
+                max-width: 400px
+
+            a.heroBtn
+                border-radius: 5px
+                background-color: $primary
+                color: #000
+                font-size: 18px
+                line-height: 23.7px
+                font-family: Rubik-regular
+                font-weight: 600
+                padding: 20px 45px
+                margin-top: 50px
+                text-transform: uppercase
+                display: inline-block
+
+// hero banner responsive
+@media only screen and (max-width: 767px)
+    .heroBanner
+        min-height: 550px
+        border-radius: 0
+
+        &::after
+            border-radius: 0
+
+        .heroContainer
+            padding-top: 150px
+            padding-bottom: 100px
+
+@media only screen and (max-width: 480px)
+    .heroBanner
+        min-height: 400px
+
+        .heroContainer
+            padding-top: 125px
+            padding-bottom: 50px
+
+            .heroInner
+                h1
+                    font-size: 35px
+                    line-height: 45px
+                    margin-bottom: 15px
+
+                p
+                    font-size: 16px
+                    line-height: 20px
+
+                a.heroBtn
+                    margin-top: 15px
+                    font-size: 16px
+                    border-radius: 10px
+                    padding: 10px 20px
+
+// cards section
+.cards
+    .cardContainer
+        padding-top: 50px
+
+        h3
+            font-family: Montserrat-regular
+            font-weight: 600
+            font-size: 42.79px
+            line-height: 55.63px
+            color: #000
+            margin-bottom: 50px
+            margin-top: 10px
+            text-align: center
+
+        .cardGrid
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            grid-gap: 25px
+
+            .cardItem
+                padding: 30px 25px
+                border-radius: 20px
+                background-color: #3F3F3F
+                position: relative
+                overflow: hidden
+
+                span
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    right: 0
+                    height: 20px
+                    display: block
+                    opacity: 0
+                    transition: .3s
+
+                &:hover
+                    span
+                        opacity: 1
+
+                .cardheader
+                    display: flex
+                    align-items: center
+                    margin-bottom: 15px
+                    padding-left: 5px
+
+                    img
+                        width: 80px
+                        height: 80px
+                        margin-right: 15px
+
+                    h5
+                        width: calc( 100% - 95px )
+                        font-family: Montserrat-regular
+                        font-weight: 600
+                        font-size: 20px
+                        line-height: 25px
+                        color: #fff
+                        margin-bottom: 0
+
+                p
+                    color: #fff
+                    font-size: 16px
+                    line-height: 1.35
+                    font-weight: 400
+                    font-family: Rubik-regular
+                    line-height: 30px
+                    margin-bottom: 25px
+
+// cars responsive
+@media only screen and (max-width: 991px)
+    .cards
+        .cardContainer
+            .cardGrid
+                grid-template-columns: 1fr 1fr
+                grid-gap: 30px
+
+@media only screen and (max-width: 767px)
+    .cards
+        .cardContainer
+            .cardGrid
+                grid-template-columns: 1fr
+                grid-gap: 25px
+
+
+.txtImgOne
+    padding-top: 80px
+    padding-bottom: 25px
+    overflow-x: hidden
+
+    .txtImgContainer
+        display: flex
+        align-items: start
+        justify-content: space-between
+        position: relative
+
+        .txt
+            width: 50%
+            padding-right: 50px
+
+            h3
+                font-family: Montserrat-regular
+                font-weight: 600
+                font-size: 42.79px
+                line-height: 55.63px
+                color: #000
+                margin-bottom: 25px
+                margin-top: 10px
+
+            
+            p
+                color: #7E8499
+                font-size: 18px
+                font-weight: 400
+                font-family: Rubik-regular
+                line-height: 30px
+                margin-bottom: 25px
+
+            a
+                display: inline-block
+                color: #000
+                padding: 15px 40px
+                background-color: $primary
+                border-radius: 5px
+                font-family: Rubik-regular
+                font-size: 18px
+                font-weight: 600
+                line-height: 24px
+                text-transform: capitalize
+                
+
+        .img
+            width: 50%
+            position: relative
+            margin-top: 15px
+            margin-left: 20px
+            margin-right: 7.5px
+            margin-bottom: 7.5px
+
+            &::after
+                position: absolute
+                top: -15px
+                left: -20px
+                background-color: #FCE912
+                content: ''
+                height: 100%
+                width: 100%
+
+            &::before
+                position: absolute
+                bottom: -7.5px
+                right: -7.5px
+                background-color: #4FB5FC
+                content: ''
+                height: 100%
+                width: 100%
+
+            img
+                width: 100%
+                height: auto
+                z-index: 1
+                position: sticky
+
+
+
+@media only screen and (max-width: 991px)
+    .txtImgOne
+        padding-top: 75px
+        padding-bottom: 50px
+
+        .txtImgContainer
+            .txt
+                padding-right: 35px
+
+
+@media only screen and (max-width: 767px)
+    .txtImgOne
+        padding: 35px 0
+        
+        .txtImgContainer
+            flex-direction: column
+
+            .txt
+                width: 100%
+                margin-bottom: 50px
+                padding-right: 0
+
+                p
+                    margin-bottom: 25px
+
+            .img
+                width: calc( 100% - 27.5px )
+                margin-bottom: 25px
+
+
+@media only screen and (max-width: 480px)
+    .txtImgOne
+        .txtImgContainer
+            .txt
+                h3
+                    font-size: 35px
+                    line-height: 45px
+
+                p
+                    font-size: 16px
+                    line-height: 20px
+
+                a
+                    font-size: 16px
+                    padding: 15px 20px
+                    border-radius: 10px
+
+
+
+
+.newsLetter
+    padding-top: 50px
+    padding-bottom: 100px
+
+    .newsContainer
+        .newsInner
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 30px rgba(0, 0, 0, 0.03)
+            border-radius: 10px
+            background-color: $secondery
+            padding: 50px
+            padding-bottom: 75px
+            margin: 0 auto
+            text-align: center
+
+            h4
+                font-family: Rubik-regular
+                font-size: 48px
+                font-style: normal
+                font-weight: 500
+                line-height: 62px
+                color: $white
+                margin: 0 auto
+                margin-bottom: 10px
+
+            p
+                font-family: Rubik-regular
+                font-weight: 500
+                color: $white
+                font-size: 16px
+                line-height: 30px
+                text-align: center
+                margin-bottom: 35px
+
+
+            form
+                position: relative
+                max-width: 525px
+                margin: 0 auto
+
+                input
+                    width: 100%
+                    background-color: $white
+                    border-radius: 10px
+                    padding: 15px 20px
+                    padding-right: 150px
+                    color: #184655
+                    font-family: Rubik-regular
+                    font-weight: 500
+                    font-size: 16px
+                    line-height: 24px
+
+                    &::placeholder
+                        color: #184655
+
+                button
+                    position: absolute
+                    top: 5px
+                    right: 5px
+                    bottom: 5px
+                    width: 120px
+                    border-radius: 10px
+                    background-color: $primary
+                    color: #000
+                    font-size: 16px
+                    font-family: Rubik-regular
+                    font-weight: 500
+
+                    &:hover
+                        opacity: 1
+
+// news letter responsive
+@media only screen and (max-width: 767px)
+    .newsLetter
+        padding-top: 0px
+        padding-bottom: 75px
+        .newsContainer
+            .newsInner
+                padding: 50px 35px    
+
+
+
+// customizing owl carousle
+.heroContainer.owl-carousel
+    .owl-dots    
+        position: absolute
+        left: 50%
+        bottom: 50px
+        transform: translateX(-50%)
+
+        button
+            span
+                width: 15px
+                height: 15px
+
+            &.active
+                span
+                    background-color: #FCE912
+
+                
+    .owl-nav
+        position: absolute
+        top: 50%
+        right: 0
+        height: 100%
+        transform: translateY(-50%)
+        margin-top: 0
+
+        .owl-prev
+            display: none
+
+        .owl-next
+            height: 100%
+            width: 50px
+            background-color: rgba(0, 0, 0, .35)
+            margin: 0
+            border-radius: 0
+            padding: 10px
+            color: #fff
+            font-size: 50px

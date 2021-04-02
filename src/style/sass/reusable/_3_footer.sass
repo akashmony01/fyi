@@ -1,0 +1,157 @@
+.footer
+    background-color: #333333
+    
+    .footerContainer
+        display: flex
+        align-items: start
+        justify-content: space-around
+        padding-top: 50px
+        padding-bottom: 50px
+        
+        .footerItem
+            width: 30%
+
+            h5
+                font-family: Rubik-regular
+                font-weight: 400
+                font-size: 21px
+                line-height: 32px
+                color: $white
+                padding-bottom: 20px
+                margin-bottom: 15px
+                position: relative
+
+                &::after
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    width: 70%
+                    height: 2px
+                    background-color: #237725
+                    content: ''
+
+            p.dark
+                font-size: 14px
+                line-height: 18px
+                font-family: Rubik-regular
+                font-weight: 400
+                color: #999999
+
+            p.light
+                font-size: 15px
+                line-height: 22.5px
+                color: #D5D5D5
+                padding-bottom: 15px
+                border-bottom: 1px solid #444444
+
+
+            ul.media
+                list-style-type: none
+                margin-bottom: 15px
+                display: flex
+                flex-wrap: wrap
+
+                li
+                    display: block
+
+                    a
+                        color: $white
+                        display: inline-block
+                        margin: 5px
+                        margin-left: 0
+                        
+                        img
+                            height: 30px
+                            width: auto
+
+            ul.footerMenu
+                list-style-type: none
+                margin-bottom: 0
+
+                li
+                    display: block
+
+                    a
+                        color: $white
+                        font-family: Rubik-regular
+                        font-size: 15px
+                        font-style: normal
+                        font-weight: 400
+                        line-height: 18px
+                        letter-spacing: 0em
+                        text-align: left
+
+            form
+                padding: 15px
+                background-color: #FFFFFF
+
+                label
+                    font-size: 16px
+                    line-height: 18.4px
+                    color: #999999
+                    font-family: Rubik-regular
+                    font-weight: 500
+                    margin-bottom: 10px
+                    display: block
+
+                input
+                    padding: 10px 15px
+                    border-radius: 10px
+                    border: 1px solid #9999
+                    max-width: 100%
+                    margin-bottom: 15px
+                    display: block
+
+                button
+                    padding: 10px 20px
+                    border-radius: 10px
+                    background-color: #AAAAAA
+                    color: #000
+                    margin-bottom: 25px
+                    font-size: 14px
+                    font-family: Rubik-regular
+                    font-weight: 400
+                    display: block
+
+
+            p.copyright
+                text-align: center
+                margin-top: 15px
+                font-family: Rubik-regular
+                font-size: 16px
+                font-style: normal
+                font-weight: 400
+                line-height: 19px
+                color: $primary
+
+    .footerBottom
+        background-color: #F8F8F8
+        padding: 15px 0
+
+        .bottomContainer
+            p
+                font-family: Rubik-regular
+                font-size: 11px
+                font-style: normal
+                font-weight: 400
+                line-height: 18px
+                letter-spacing: 0em
+                text-align: left
+                color: #666666
+                margin-bottom: 0
+
+
+
+// footer responsive
+@media only screen and (max-width: 767px)
+    .footer
+        padding-bottom: 25px
+
+        .footerContainer
+            flex-direction: column
+
+            .footerItem
+                width: 100%
+
+                .footerLogo
+                    margin-bottom: 25px

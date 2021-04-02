@@ -1,0 +1,102 @@
+// importing fonts 
+// ==================================================================
+@font-face
+    font-family: Rubik-light
+    src: url("vendor/webfonts/custom/Rubik/Rubik-Light.ttf")
+
+@font-face
+    font-family: Rubik-regular
+    src: url("vendor/webfonts/custom/Rubik/Rubik-Regular.ttf")
+
+@font-face
+    font-family: Rubik-medium
+    src: url("vendor/webfonts/custom/Rubik/Rubik-Medium.ttf")
+
+@font-face
+    font-family: Rubik-bold
+    src: url("vendor/webfonts/custom/Rubik/Rubik-Bold.ttf")
+
+@font-face
+    font-family: Montserrat-light
+    src: url("vendor/webfonts/custom/Montserrat/Montserrat-Light.ttf")
+
+@font-face
+    font-family: Montserrat-regular
+    src: url("vendor/webfonts/custom/Montserrat/Montserrat-Regular.ttf")
+
+@font-face
+    font-family: Montserrat-medium
+    src: url("vendor/webfonts/custom/Montserrat/Montserrat-Medium.ttf")
+
+@font-face
+    font-family: Montserrat-bold
+    src: url("vendor/webfonts/custom/Montserrat/Montserrat-Bold.ttf")
+
+
+
+
+// reseting basic styles
+// ==================================================================
+html
+  scroll-behavior: smooth
+
+body
+	overflow-x: hidden
+	background-color: #ffff
+
+// all element styls
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	border: none
+	background: none
+	border-radius: 0
+	outline: none
+	text-decoration: none
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6
+		line-height: 1.25
+
+	p,
+	textarea,
+	input,
+	pre,
+	button,
+	figcaption,
+	label,
+	a
+		line-height: 1.15
+
+	button,
+	a
+		cursor: pointer
+		transition: .3s
+		text-decoration: none!important
+		transition: .3s
+
+		&:hover
+			opacity: .85
+		
+	button,
+	.button
+		text-align: center
+		padding: 10px 25px
+		line-height: 1.2
+		text-transform: capitalize
+		text-decoration: none
+
+		&:focus
+			outline: none
+	
+	.disabled
+		opacity: 0.5!important
+		
+	ul
+		list-style-type: none
+		margin: 0
+		padding: 0
